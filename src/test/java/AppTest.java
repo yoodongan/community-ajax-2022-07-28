@@ -47,7 +47,7 @@ public class AppTest {
         assertThat(jsonStr).isEqualTo("""
                 [{"id":1,"title":"제목1","body":"내용1"},{"id":2,"title":"제목2","body":"내용2"}]
                 """.trim());
-    }ㄹ
+    }
 
     @Test
     void ObjectMapper__articleDtoMapToJsonStr() {
