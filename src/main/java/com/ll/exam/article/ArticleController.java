@@ -1,12 +1,8 @@
 package com.ll.exam.article;
 
-import com.ll.exam.ResultData;
 import com.ll.exam.Rq;
 import com.ll.exam.article.dto.ArticleDto;
-import com.ll.exam.util.Ut;
-
 import java.util.List;
-import java.util.Map;
 
 public class ArticleController {
 
@@ -133,9 +129,7 @@ public class ArticleController {
     public void showListtoJson(Rq rq) {
         List<ArticleDto> articleDtos = articleService.findAll();
 
-        ResultData<List<ArticleDto>> resultData = new ResultData("성공", "S-1", articleDtos);
-
-        rq.json(resultData);
+        rq.successJson(articleDtos);
 
     }
 }
