@@ -3,6 +3,7 @@ package com.ll.exam.article;
 import com.ll.exam.article.dto.ArticleDto;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArticleService {
     private ArticleRepository articleRepository;
@@ -29,5 +30,9 @@ public class ArticleService {
 
     public void modify(long id, String title, String body) {
         articleRepository.modify(id, title, body);
+    }
+
+    public List<ArticleDto> findIdGreaterThan(long fromId) {
+        return articleRepository.findAllIdGreaterThan(fromId);
     }
 }
